@@ -1,0 +1,1660 @@
+{
+    "id": "41c8adbdc83979ec8c82a04138fef600",
+    "name": "Wordpress API v2",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "5d31f3d4b7dc0c25426de0d3c4bbc6b9",
+            "name": "Retrieve a Media item",
+            "url": "{{site}}\/wp-json\/wp\/v2\/media\/{{mediaId}}",
+            "description": "|||\n|:--|:--\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "eebf4f30f2ee0d85785d07ff10e4419e",
+            "name": "Retrieve a wp_block-revision",
+            "url": "{{site}}\/wp-json\/wp\/v2\/blocks\/{{blockId}}\/autosaves?parent={{postId}}",
+            "description": "|||\n|:---|:---\n|```parent```|The ID for the parent of the object.<br\/>Request:**1**\n|```context```|Scope under which the request is made; |```determines```|fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "parent",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "8d9488c405f9c8cba8ce7ac909c25493",
+            "name": "Create a Comment ",
+            "url": "{{site}}\/wp-json\/wp\/v2\/comments?post={{commentPostId}}&content={{content}}&author_name={{author}}&author_email={{email}}",
+            "description": "|||\n|:---|:---\n|```post```|The ID of the associated post object.<br\/>Required:**1**\n|```content```|The content for the object.<br\/>Required:**1**\n|```author```|The ID of the user object, if author was a user.\n|```author_email```|Email address for the object author.\n|```author_ip```|IP address for the object author.\n|```author_name```|Display name for the object author.\n|```author_url```|URL for the object author.\n|```author_user_agent```|User agent for the object author.\n|```content```|The conte",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "post",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "author_name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "author_email",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "78ee021e6263977008699db1387f45da",
+            "name": "Retrieve a Taxonomy",
+            "url": "{{site}}\/wp-json\/wp\/v2\/taxonomies",
+            "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```type```|Limit results to taxonomies associated with a specific post type.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "12134858da3dcc85deb6ea9f4abeda57",
+            "name": "Create a User",
+            "url": "{{site}}\/wp-json\/wp\/v2\/users",
+            "description": "|||\n|:---|:---\n|```username```|Login name for the user.<br\/>Required: **1**\n|```name```|Display name for the user.\n|```first_name```|First name for the user.\n|```last_name```|Last name for the user.\n|```email```|The email address for the user.<br\/>Required: **1**\n|```url```|URL of the user.\n|```description```|Description of the user.\n|```locale```|Locale for the user.<br\/>One of: **en_US**\n|```nickname```|The nickname for the user.\n|```slug```|An alphanumeric identifier for the user.\n|```roles``",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "ce9451992b8077cfc37a2f2dae2fd4c0",
+            "name": "List Users ",
+            "url": "{{site}}\/wp-json\/wp\/v2\/users",
+            "description": "|||\n|:--|:--\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```exclude```|Ensure result set excludes specific IDs.\n|```include```|Limit result set to specific IDs.\n|```offset```|Offset the",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "42d1d0183f0d8eb9519a669cc8c3803d",
+            "name": "Create a wp_block-revision",
+            "url": "{{site}}\/wp-json\/wp\/v2\/{{blockId}}\/autosaves",
+            "description": "|||\n|:--|:--\n|```parent```|The ID for the parent of the object.\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```title```|The title for the object.\n|```content```|The",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "5ad8b4655ce8fadd57f90f3aa11f0045",
+            "name": "Retrieve a Status",
+            "url": "{{site}}\/wp-json\/wp\/v2\/statuses",
+            "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, ed**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "787921f668ad01f0686d5f566aac55a6",
+            "name": "List Search-results",
+            "url": "{{site}}\/wp-json\/wp\/v2\/search",
+            "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```type```|Limit results to items of an object type.<br\/>Default: **post**<br\/>One of: **post**\n|```subtype```|Limit results to item",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "8a7d9963e7ea1bdaa68b38664533d6d1",
+            "name": "Delete a Post-revision",
+            "url": "{{site}}\/wp\/v2\/posts\/{{parentId}}\/revisions\/{{revisionsId}}",
+            "description": "| | |\n| :--- | :-- \n|```parent```|The ID for the parent of the object.\n|```id```|Unique identifier for the object.\n|```force```|Required to be true, as revisions do not support trashing.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "DELETE",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "ecfa1a8dc9b27d7c850bb460d9a100c1",
+            "name": "Update a Category",
+            "url": "{{site}}\/wp-json\/wp\/v2\/categories\/{{categoriesId}}?name={{categoriesName}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```description```|HTML description of the term.\n|```name```|HTML title for the term.\n|```slug```|An alphanumeric identifier for the term unique to its type.\n|```parent```|The parent term ID.\n|```meta```|Meta fields.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "2b8a1144dcf50fe426a31dd8131f66b4",
+            "name": "Delete a Category",
+            "url": "{{site}}\/wp-json\/wp\/v2\/categories\/{{categoriesId}}?force=1",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```force```|Required to be true, as terms do not support trashing.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "DELETE",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "force",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "14c461eac2bac474ca4828771c667d0a",
+            "name": "Create a Page",
+            "url": "{{site}}\/wp-json\/wp\/v2\/pages?content={{content}}&title={{title}}&excerpt={{excerpt}}",
+            "description": "|||\n|:---|:---\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```parent```|The ID for the parent of the object.\n|```title```|The title for the object.\n|```content```|T",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "title",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "excerpt",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "ca37f1ff4426b9d74b1cb726c856e67a",
+            "name": "Retrieve a Comment",
+            "url": "{{site}}\/wp-json\/wp\/v2\/comments\/{{commentId}}",
+            "description": "**Authentication Required**\n\n\n|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present inresponse.<br\/>Default:**view**<br\/>One of: **view, embed, edit**\n|```password```|The password for the parent post of the comment (if the post is password protected).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "e08758cf731bf66d208b372c18fca48d",
+            "name": "Delete a Comment",
+            "url": "{{site}}\/wp-json\/wp\/v2\/comments\/{{commentId}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```force```|Whether to bypass trash and force deletion.\n|```password```|The password for the parent post of the comment (if the post is password protected).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "DELETE",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "14492ddb66df34461c28ea48efa6e369",
+            "name": "List Media ",
+            "url": "{{site}}\/wp-json\/wp\/v2\/media",
+            "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```after```|Limit response to posts published after a given ISO8601 compliant date.\n|```author```|Limit result set to posts as",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "52223d4d8878d076cb572b0160d2b978",
+            "name": "Create a Media item ",
+            "url": "{{site}}\/wp-json\/wp\/v2\/media",
+            "description": "|||\n|:--|:--\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```title```|The title for the object.\n|```author```|The ID for the author of the object.\n|```comment_status```|Whether or not comments are open on the object.<br\/>One of: **open, c",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "dbab42b3b84effc0b7bc280e34996ac2",
+            "name": "List Categories",
+            "url": "{{site}}\/wp-json\/wp\/v2\/categories",
+            "description": "|||\n|:--|:--\n|```context```|Scope under which the request is made;determines fields present in response.\n<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```exclude```|Ensure result set excludes specific IDs.\n|```include```|Limit result set to specific IDs.\n|```order```|Order sort ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "d555681329ff91365f3d870535bee2b6",
+            "name": "Delete a Media item",
+            "url": "{{site}}\/wp-json\/wp\/v2\/media\/{{mediaId}}?force=1",
+            "description": "|||\n|:--|:--\n|```id```|Unique identifier for the object.\n|```force```|Whether to bypass trash and force deletion.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "DELETE",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "force",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "766ef02923bbff2edaeaa38da5dff75a",
+            "name": "Update a Post",
+            "url": "{{site}}\/wp-json\/wp\/v2\/posts\/{{postId}}?content={{content}}&title={{title}}&excerpt={{excerpt}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```title```|The title for the object.\n|```content```|The cont",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "title",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "excerpt",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "b68392f27740bd60de9bc6161cd540ee",
+            "name": "Update Me",
+            "url": "{{site}}\/wp-json\/wp\/v2\/users\/me",
+            "description": "|||\n|:---|:---\n|```username```|Login name for the user.\n|```name```|Display name for the user.\n|```first_name```|First name for the user.\n|```last_name```|Last name for the user.\n|```email```|The email address for the user.\n|```url```|URL of the user.\n|```description```|Description of the user.\n|```locale```|Locale for the user.<br\/>One of: **en_US**\n|```nickname```|The nickname for the user.\n|```slug```|An alphanumeric identifier for the user.\n|```roles```|Roles assigned to the user.\n|```passwo",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "c50b075fde17499b99a445fa2d1bedbd",
+            "name": "Delete Me",
+            "url": "{{site}}\/wp-json\/wp\/v2\/users\/me",
+            "description": "|||\n|:---|:---\n|```force```|Required to be true, as users do not support trashing.\n|```reassign```|Reassign the deleted user's posts and links to this user ID.<br\/>Required: **1**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "DELETE",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "47c534002bbef98e1ad712428b821cd7",
+            "name": "Retrieve a Me",
+            "url": "{{site}}\/wp-json\/wp\/v2\/users\/me",
+            "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "308b0254de8cd62603aa2bb10266a5b0",
+            "name": "Retrieve a Post",
+            "url": "{{site}}\/wp-json\/wp\/v2\/posts\/{{postId}}",
+            "description": "| | |\n| :--- | :---\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```password```|The password for the post if it is password protected.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "dad63f486fcdfac4d997cd1ae08f2b42",
+            "name": "Delete a Post",
+            "url": "{{site}}\/wp-json\/wp\/v2\/posts\/{{postId}}",
+            "description": "| | |\n| :--- | :---\n|```id```|Unique identifier for the object.\n|```force```|Whether to bypass trash and force deletion.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "DELETE",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "0a33716cc0535500b67d33675c60101f",
+            "name": "Update a User",
+            "url": "{{site}}\/wp-json\/wp\/v2\/users\/{{userId}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the user.\n|```username```|Login name for the user.\n|```name```|Display name for the user.\n|```first_name```|First name for the user.\n|```last_name```|Last name for the user.\n|```email```|The email address for the user.\n|```url```|URL of the user.\n|```description```|Description of the user.\n|```locale```|Locale for the user.<br\/>One of: **en_US**\n|```nickname```|The nickname for the user.\n|```slug```|An alphanumeric identifier for the user.\n|```roles",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "c7c54402e0927de6ae3a0757ba9f6b3d",
+            "name": "Delete User",
+            "url": "{{site}}\/wp-json\/wp\/v2\/users\/{{userId}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the user.\n|```force```|Required to be true, as users do not support trashing.\n|```reassign```|Reassign the deleted user's posts and links to this user ID.<br\/>Required: **1**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "DELETE",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "72a723b2d5b888b1a5f7037e8f3da4be",
+            "name": "Retrieve a User",
+            "url": "{{site}}\/wp-json\/wp\/v2\/users\/{{userId}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the user.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "1a0d2fec518adc9fefc597523f795181",
+            "name": "Create a wp_block ",
+            "url": "{{site}}\/wp-json\/wp\/v2\/blocks?title={{title}}&content={{content}}",
+            "description": "| | |\n| :--- | :---\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```title```|The title for the object.\n|```content```|The content for the object.\n|```template```|The",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "title",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "73480787e974b61d5c2f1d4cb6943987",
+            "name": "List Themes ",
+            "url": "{{site}}\/wp-json\/wp\/v2\/themes?status={{themeStatus}}",
+            "description": "|||\n|:---|:---\n|```status```|Limit result set to themes assigned one or more statuses.<br\/>Required: **1**\n|```context```|Scope under which the request is made; determines fields present in response.\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "status",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "455277559d04244d2ff76dfc7ec64358",
+            "name": "Update a Comment",
+            "url": "{{site}} \/wp-json\/wp\/v2\/comments\/{{commentId}}?content={{content}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```author```|The ID of the user object, if author was a user.\n|```author_email```|Email address for the object author.\n|```author_ip```|IP address for the object author.\n|```author_name```|Display name for the object author.\n|```author_url```|URL for the object author.\n|```author_user_agent```|User agent for the object author.\n|```content```|The content for the object.\n|```date```|The date the object was published, in the site's timezon",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "ebed7123c00e33a7d2d4708c990048c8",
+            "name": "Retrieve a wp_block-revision with parent",
+            "url": "{{site}}\/wp-json\/wp\/v2\/blocks\/{{parentId}}\/autosaves\/{{blockId}}",
+            "description": "|||\n|:---|:---\n|```parent```|The ID for the parent of the object.\n|```id```|The ID for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "8938503cef162c13f0961585c373c0c2",
+            "name": "Delete a wp_block",
+            "url": "{{site}}\/wp-json\/wp\/v2\/blocks\/{{blockId}}?force=1",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```force```|Whether to bypass trash and force deletion.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "DELETE",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "force",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "05a75c5bc2573183be8ac0df66335f69",
+            "name": "Create a category",
+            "url": "{{site}}\/wp-json\/wp\/v2\/categories?name={{categoriesName}}",
+            "description": "|||\n|:---|:---\n|```description```|HTML description of the term.\n|```name```|HTML title for the term.<br\/>Required: **1**\n|```slug```|An alphanumeric identifier for the term unique to its type.\n|```parent```|The parent term ID.\n|```meta```|Meta fields.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "14142fbf0ea6c64366ea0a344c4fc9a2",
+            "name": "Retrieve a Page",
+            "url": "{{site}}\/wp-json\/wp\/v2\/pages\/{{pageId}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```password```|The password for the post if it is password protected.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "8ad168cd6ac0d3bf4f5e3628ac94c4ad",
+            "name": "Delete a Page",
+            "url": "{{site}}\/wp-json\/wp\/v2\/pages\/{{pageId}}",
+            "description": "|||\n|:--|:--\n|```id```|Unique identifier for the object.\n|```force```|Whether to bypass trash and force deletion.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "DELETE",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "cb5dfcdc55040ac876e44a78d05f1537",
+            "name": "Updating a wp_block",
+            "url": "{{site}}\/wp-json\/wp\/v2\/blocks\/{{blockId}}?content={{content}}&title={{title}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```title```|The title for the object.\n|```content```|The cont",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "title",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "0ff8e8f3285320cdb168009c4f55dd0c",
+            "name": "Update a Page",
+            "url": "{{site}}\/wp-json\/wp\/v2\/pages\/{{pageId}}?title={{title}}&content={{content}}&excerpt={{excerpt}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```parent```|The ID for the parent of the object.\n|```title``",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "title",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "excerpt",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "cda1d676d7c9ae1c997a5551b6c91e40",
+            "name": "Delete a Tag",
+            "url": "{{site}}\/wp-json\/wp\/v2\/tags\/{{tagId}}?force=1",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```force```|Required to be true, as terms do not support trashing.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "DELETE",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "force",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "0e98a1b8e30885f744d04c485d1e9246",
+            "name": "List Types",
+            "url": "{{site}}\/wp-json\/wp\/v2\/types",
+            "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "c4a8bb695ca052c894cf50a1106cda77",
+            "name": "List Tags",
+            "url": "{{site}}\/wp-json\/wp\/v2\/tags",
+            "description": "|||\n|:--|:---\n|```context```|Scope under which the request is made;determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```exclude```|Ensure result set excludes specific IDs.\n|```include```|Limit result set to specific IDs.\n|```offset```|Offset the",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "47380803fc76140a84f61d9effdc6b29",
+            "name": "Create Posts",
+            "url": "{{site}}\/wp-json\/wp\/v2\/posts?content={{content}}&title={{title}}",
+            "description": "| | |\n| :--- | :---\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug``` |An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```title```|The title for the object.\n|```content```|The content for the object.\n|```author```|The ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "title",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "aaf3d6791de64d4ddc616c2f08db31e8",
+            "name": "Retrieve a Type",
+            "url": "{{site}}\/wp-json\/wp\/v2\/types\/{{typeId}}?type={{type}}",
+            "description": "|||\n|:---|:---\n|```type```|An alphanumeric identifier for the post type.<br\/> Required:**1**\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "9630fe75abf29c231be7a5afe37d37e4",
+            "name": "Update Site Settings ",
+            "url": "{{site}}\/wp-json\/wp\/v2\/settings",
+            "description": "|||\n|:---|:---\n|```title```|Site title.\n|```description```|Site tagline.\n|```timezone```|A city in the same timezone as you.\n|```date_format```|A date format for all date strings.\n|```time_format```|A time format for all time strings.\n|```start_of_week```|A day number of the week that the week should start on.\n|```language```|WordPress locale code.\n|```use_smilies```|Convert emoticons like :-) and :-P to graphics on display.\n|```default_category```|Default post category.\n|```default_post_format`",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "5c87db87718917219507ac90f58ebae8",
+            "name": "Retrieve Site Settings ",
+            "url": "{{site}}\/wp-json\/wp\/v2\/settings",
+            "description": "There are no arguments for this endpoint.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "189d9b184dccb525f0a0168fa9f2b9ed",
+            "name": "Retrieve a Taxonomy",
+            "url": "{{site}}\/wp-json\/wp\/v2\/taxonomies\/{{taxonomy}}",
+            "description": "|||\n|:--|:--\n|```taxonomy```|An alphanumeric identifier for the taxonomy.\n|```context```|Scope under which the request is made; determines fields present in response.<bvr\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "0af349e715970c25b42961bca3792233",
+            "name": "Routes",
+            "url": "{{site}}\/wp-json",
+            "description": "Returns all the available API routes and endpoints for a Wordpress instance.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "bbc2251d0414607d6dcb16fdf331d2f8",
+            "name": "Retrieve a Status",
+            "url": "{{site}}\/wp-json\/wp\/v2\/statuses\/{{statusId}}",
+            "description": "|||\n|:---|:---\n|```status```|An alphanumeric identifier for the status.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "b3cde2a7a91b618e67f826bfbcb69765",
+            "name": "List Pages",
+            "url": "{{site}}\/wp-json\/wp\/v2\/pages",
+            "description": "|||\n|:---|:---\n|```context```|\tScope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```after```|Limit response to posts published after a given ISO8601 compliant date.\n|```author```|Limit result set to posts a",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "4a3e9ed48b7cd5e0036905f16c75e3ca",
+            "name": "List Posts",
+            "url": "{{site}}\/wp-json\/wp\/v2\/posts",
+            "description": "## List Posts\n| | |\n| :-- | :--\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page``` | Current page of collection.<br\/>Default:**1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```after```|Limit response to posts published after a given ISO8601 compliant date.\n|```author```|Limit result s",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "5c2dac14fab183ad10cf0a655c7a055a",
+            "name": "Retrieve a Post-Revision",
+            "url": "{{site}}\/wp\/v2\/posts\/{{parentId}}\/revisions\/{{revisionId}}",
+            "description": "| | |\n|:--|:--\n|```parent```|The ID for the parent of the object.\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "b2dde640233f7760e53a937d549c955b",
+            "name": "Update a Tag ",
+            "url": "{{site}}\/wp-json\/wp\/v2\/tags\/{{tagId}}?name={{test-tag}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```description```|HTML description of the term.\n|```name```|HTML title for the term.\n|```slug```|An alphanumeric identifier for the term unique to its type.\n|```meta```|Meta fields.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "6eb77747bd213e6c993ad11a757985b2",
+            "name": "Retrieve a Rendered-block",
+            "url": "{{site}}\/wp-json\/wp\/v2\/block-renderer\/{{blockName}}",
+            "description": "|||\n|:---|:---\n|```name```|Unique registered name for the block.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **edit**\n|```attributes```|Attributes for core\/tag-cloud block\n|```post_id```|ID of the post context.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "82b5e2ee5e18d4957bac4cd1dda79f94",
+            "name": "Update a Media item",
+            "url": "{{site}}\/wp-json\/wp\/v2\/media\/{{mediaId}}?caption={{caption}}",
+            "description": "|||\n|:--|:--\n|```id```|Unique identifier for the object.\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```title```|The title for the object.\n|```author```|The ID for the author of the object.\n|```comment_status```|Whether or not comments a",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "caption",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "e183cbddc6c740626b0f80bea2fe3fc4",
+            "name": "Retrieve a Category ",
+            "url": "{{site}}\/wp-json\/wp\/v2\/categories\/{{categoriesId}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "7895aad94ebac5771d3d116c91c127b5",
+            "name": "List Comments",
+            "url": "{{site}}\/wp-json\/wp\/v2\/comments",
+            "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```after```|Limit response to comments published after a given ISO8601 compliant date.\n|```author```|Limit result set to comme",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "7c692e7ef7e24b4c83c3678d62c44f26",
+            "name": "Retrieve a Tag",
+            "url": "{{site}}\/wp-json\/wp\/v2\/tags\/{{tagId}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```context```|Scope under which the request is made; |```determines```|fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "9cb8b3f1adf38ee20a2725f3de186480",
+            "name": "List Post Revisions",
+            "url": "{{site}}\/wp\/v2\/posts\/{{postId}}\/revisions",
+            "description": "| | |\n| :-- | :--\n|```parent``` |The ID for the parent of the object.\n|```context```|\tScope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.\n|```search```|Limit results to those matching a string.\n|```exclude```|Ensure result set excludes specific IDs.\n|```include```\t| Limit result set t",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "698fa1f49106d7b283186c9b202e36b2",
+            "name": "Retrieve a wp_block",
+            "url": "{{site}}\/wp-json\/wp\/v2\/blocks\/{{blockId}}",
+            "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```password```|The password for the post if it is password protected.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "06c455e81d8746465a3f89606fb2e7be",
+            "name": "Create a Tag ",
+            "url": "{{site}}\/wp-json\/wp\/v2\/tags?name={{test-tag}}",
+            "description": "|||\n|:---|:---\n|```description```|HTML description of the term.\n|```name```|HTML title for the term.<br\/>Required: **1**\n|```slug```|An alphanumeric identifier for the term unique to its type.\n|```meta```|Meta fields.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        },
+        {
+            "id": "330c3e5592f310c939e3cfc3251f714f",
+            "name": "List wp_blocks",
+            "url": "{{site}}\/wp-json\/wp\/v2\/blocks",
+            "description": "| | | \n| :--- | :---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```after```|Limit response to posts published after a given ISO8601 compliant date.\n|```before```|Limit response to post",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "GET",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "41c8adbdc83979ec8c82a04138fef600",
+            "rawModeData": ""
+        }
+    ]
+}
