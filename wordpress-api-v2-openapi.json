@@ -1,0 +1,724 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Wordpress",
+        "description": "The WordPress REST API provides API endpoints for WordPress data types that allow developers to interact with sites remotely by sending and receiving JSON.\n\n# Why use the WordPress REST API\nThe WordPress REST API makes it easier than ever to use WordPress in new and exciting ways, such as creating Single Page Applications on top of WordPress. You could create a plugin to provide an entirely new admin experiences for WordPress, or create a brand new interactive front-end experience.\n\n# Key Concepts\nTo get started with using the WordPress REST API we will break down some of the key concepts and terms associated with the API:\n* Routes\/Endpoints\n* Requests\n* Responses\n* Schema\n* Controller Classes\n\nEach of these concepts play a crucial role in using and understanding the WordPress REST API. Let\u2019s briefly break them down so that we can later explore each in greater depth.\n\n# Routes & Endpoints\nA route, in the context of the WordPress REST API, is a URI which can be mapped to different HTT",
+        "termsOfService": ""
+    },
+    "servers": [],
+    "paths": {
+        "{{site}}\/wp-json\/wp\/v2\/media\/{{mediaId}}": {
+            "GET": {
+                "summary": "Retrieve a Media item",
+                "description": "|||\n|:--|:--\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/blocks\/{{blockId}}\/autosaves?parent={{postId}}": {
+            "GET": {
+                "summary": "Retrieve a wp_block-revision",
+                "description": "|||\n|:---|:---\n|```parent```|The ID for the parent of the object.<br\/>Request:**1**\n|```context```|Scope under which the request is made; |```determines```|fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "parent",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/comments?post={{commentPostId}}&content={{content}}&author_name={{author}}&author_email={{email}}": {
+            "POST": {
+                "summary": "Create a Comment ",
+                "description": "|||\n|:---|:---\n|```post```|The ID of the associated post object.<br\/>Required:**1**\n|```content```|The content for the object.<br\/>Required:**1**\n|```author```|The ID of the user object, if author was a user.\n|```author_email```|Email address for the object author.\n|```author_ip```|IP address for the object author.\n|```author_name```|Display name for the object author.\n|```author_url```|URL for the object author.\n|```author_user_agent```|User agent for the object author.\n|```content```|The conte",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "post",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "content",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "author_name",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "author_email",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/taxonomies": {
+            "GET": {
+                "summary": "Retrieve a Taxonomy",
+                "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```type```|Limit results to taxonomies associated with a specific post type.\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/users": {
+            "POST": {
+                "summary": "Create a User",
+                "description": "|||\n|:---|:---\n|```username```|Login name for the user.<br\/>Required: **1**\n|```name```|Display name for the user.\n|```first_name```|First name for the user.\n|```last_name```|Last name for the user.\n|```email```|The email address for the user.<br\/>Required: **1**\n|```url```|URL of the user.\n|```description```|Description of the user.\n|```locale```|Locale for the user.<br\/>One of: **en_US**\n|```nickname```|The nickname for the user.\n|```slug```|An alphanumeric identifier for the user.\n|```roles``",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "GET": {
+                "summary": "List Users ",
+                "description": "|||\n|:--|:--\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```exclude```|Ensure result set excludes specific IDs.\n|```include```|Limit result set to specific IDs.\n|```offset```|Offset the",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/{{blockId}}\/autosaves": {
+            "POST": {
+                "summary": "Create a wp_block-revision",
+                "description": "|||\n|:--|:--\n|```parent```|The ID for the parent of the object.\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```title```|The title for the object.\n|```content```|The",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/statuses": {
+            "GET": {
+                "summary": "Retrieve a Status",
+                "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, ed**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/search": {
+            "GET": {
+                "summary": "List Search-results",
+                "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```type```|Limit results to items of an object type.<br\/>Default: **post**<br\/>One of: **post**\n|```subtype```|Limit results to item",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp\/v2\/posts\/{{parentId}}\/revisions\/{{revisionsId}}": {
+            "DELETE": {
+                "summary": "Delete a Post-revision",
+                "description": "| | |\n| :--- | :-- \n|```parent```|The ID for the parent of the object.\n|```id```|Unique identifier for the object.\n|```force```|Required to be true, as revisions do not support trashing.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/categories\/{{categoriesId}}?name={{categoriesName}}": {
+            "POST": {
+                "summary": "Update a Category",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```description```|HTML description of the term.\n|```name```|HTML title for the term.\n|```slug```|An alphanumeric identifier for the term unique to its type.\n|```parent```|The parent term ID.\n|```meta```|Meta fields.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/categories\/{{categoriesId}}?force=1": {
+            "DELETE": {
+                "summary": "Delete a Category",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```force```|Required to be true, as terms do not support trashing.\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "force",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/pages?content={{content}}&title={{title}}&excerpt={{excerpt}}": {
+            "POST": {
+                "summary": "Create a Page",
+                "description": "|||\n|:---|:---\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```parent```|The ID for the parent of the object.\n|```title```|The title for the object.\n|```content```|T",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "content",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "excerpt",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/comments\/{{commentId}}": {
+            "GET": {
+                "summary": "Retrieve a Comment",
+                "description": "**Authentication Required**\n\n\n|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present inresponse.<br\/>Default:**view**<br\/>One of: **view, embed, edit**\n|```password```|The password for the parent post of the comment (if the post is password protected).",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "DELETE": {
+                "summary": "Delete a Comment",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```force```|Whether to bypass trash and force deletion.\n|```password```|The password for the parent post of the comment (if the post is password protected).",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/media": {
+            "GET": {
+                "summary": "List Media ",
+                "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```after```|Limit response to posts published after a given ISO8601 compliant date.\n|```author```|Limit result set to posts as",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "POST": {
+                "summary": "Create a Media item ",
+                "description": "|||\n|:--|:--\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```title```|The title for the object.\n|```author```|The ID for the author of the object.\n|```comment_status```|Whether or not comments are open on the object.<br\/>One of: **open, c",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/categories": {
+            "GET": {
+                "summary": "List Categories",
+                "description": "|||\n|:--|:--\n|```context```|Scope under which the request is made;determines fields present in response.\n<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```exclude```|Ensure result set excludes specific IDs.\n|```include```|Limit result set to specific IDs.\n|```order```|Order sort ",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/media\/{{mediaId}}?force=1": {
+            "DELETE": {
+                "summary": "Delete a Media item",
+                "description": "|||\n|:--|:--\n|```id```|Unique identifier for the object.\n|```force```|Whether to bypass trash and force deletion.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "force",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/posts\/{{postId}}?content={{content}}&title={{title}}&excerpt={{excerpt}}": {
+            "POST": {
+                "summary": "Update a Post",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```title```|The title for the object.\n|```content```|The cont",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "content",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "excerpt",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/users\/me": {
+            "POST": {
+                "summary": "Update Me",
+                "description": "|||\n|:---|:---\n|```username```|Login name for the user.\n|```name```|Display name for the user.\n|```first_name```|First name for the user.\n|```last_name```|Last name for the user.\n|```email```|The email address for the user.\n|```url```|URL of the user.\n|```description```|Description of the user.\n|```locale```|Locale for the user.<br\/>One of: **en_US**\n|```nickname```|The nickname for the user.\n|```slug```|An alphanumeric identifier for the user.\n|```roles```|Roles assigned to the user.\n|```passwo",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "DELETE": {
+                "summary": "Delete Me",
+                "description": "|||\n|:---|:---\n|```force```|Required to be true, as users do not support trashing.\n|```reassign```|Reassign the deleted user's posts and links to this user ID.<br\/>Required: **1**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "GET": {
+                "summary": "Retrieve a Me",
+                "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/posts\/{{postId}}": {
+            "GET": {
+                "summary": "Retrieve a Post",
+                "description": "| | |\n| :--- | :---\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```password```|The password for the post if it is password protected.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "DELETE": {
+                "summary": "Delete a Post",
+                "description": "| | |\n| :--- | :---\n|```id```|Unique identifier for the object.\n|```force```|Whether to bypass trash and force deletion.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/users\/{{userId}}": {
+            "POST": {
+                "summary": "Update a User",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the user.\n|```username```|Login name for the user.\n|```name```|Display name for the user.\n|```first_name```|First name for the user.\n|```last_name```|Last name for the user.\n|```email```|The email address for the user.\n|```url```|URL of the user.\n|```description```|Description of the user.\n|```locale```|Locale for the user.<br\/>One of: **en_US**\n|```nickname```|The nickname for the user.\n|```slug```|An alphanumeric identifier for the user.\n|```roles",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "DELETE": {
+                "summary": "Delete User",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the user.\n|```force```|Required to be true, as users do not support trashing.\n|```reassign```|Reassign the deleted user's posts and links to this user ID.<br\/>Required: **1**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "GET": {
+                "summary": "Retrieve a User",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the user.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/blocks?title={{title}}&content={{content}}": {
+            "POST": {
+                "summary": "Create a wp_block ",
+                "description": "| | |\n| :--- | :---\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```title```|The title for the object.\n|```content```|The content for the object.\n|```template```|The",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "content",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/themes?status={{themeStatus}}": {
+            "GET": {
+                "summary": "List Themes ",
+                "description": "|||\n|:---|:---\n|```status```|Limit result set to themes assigned one or more statuses.<br\/>Required: **1**\n|```context```|Scope under which the request is made; determines fields present in response.\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "status",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}} \/wp-json\/wp\/v2\/comments\/{{commentId}}?content={{content}}": {
+            "POST": {
+                "summary": "Update a Comment",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```author```|The ID of the user object, if author was a user.\n|```author_email```|Email address for the object author.\n|```author_ip```|IP address for the object author.\n|```author_name```|Display name for the object author.\n|```author_url```|URL for the object author.\n|```author_user_agent```|User agent for the object author.\n|```content```|The content for the object.\n|```date```|The date the object was published, in the site's timezon",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "content",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/blocks\/{{parentId}}\/autosaves\/{{blockId}}": {
+            "GET": {
+                "summary": "Retrieve a wp_block-revision with parent",
+                "description": "|||\n|:---|:---\n|```parent```|The ID for the parent of the object.\n|```id```|The ID for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/blocks\/{{blockId}}?force=1": {
+            "DELETE": {
+                "summary": "Delete a wp_block",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```force```|Whether to bypass trash and force deletion.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "force",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/categories?name={{categoriesName}}": {
+            "POST": {
+                "summary": "Create a category",
+                "description": "|||\n|:---|:---\n|```description```|HTML description of the term.\n|```name```|HTML title for the term.<br\/>Required: **1**\n|```slug```|An alphanumeric identifier for the term unique to its type.\n|```parent```|The parent term ID.\n|```meta```|Meta fields.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/pages\/{{pageId}}": {
+            "GET": {
+                "summary": "Retrieve a Page",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```password```|The password for the post if it is password protected.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "DELETE": {
+                "summary": "Delete a Page",
+                "description": "|||\n|:--|:--\n|```id```|Unique identifier for the object.\n|```force```|Whether to bypass trash and force deletion.\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/blocks\/{{blockId}}?content={{content}}&title={{title}}": {
+            "POST": {
+                "summary": "Updating a wp_block",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```title```|The title for the object.\n|```content```|The cont",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "content",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/pages\/{{pageId}}?title={{title}}&content={{content}}&excerpt={{excerpt}}": {
+            "POST": {
+                "summary": "Update a Page",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```parent```|The ID for the parent of the object.\n|```title``",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "content",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "excerpt",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/tags\/{{tagId}}?force=1": {
+            "DELETE": {
+                "summary": "Delete a Tag",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```force```|Required to be true, as terms do not support trashing.\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "force",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/types": {
+            "GET": {
+                "summary": "List Types",
+                "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/tags": {
+            "GET": {
+                "summary": "List Tags",
+                "description": "|||\n|:--|:---\n|```context```|Scope under which the request is made;determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```exclude```|Ensure result set excludes specific IDs.\n|```include```|Limit result set to specific IDs.\n|```offset```|Offset the",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/posts?content={{content}}&title={{title}}": {
+            "POST": {
+                "summary": "Create Posts",
+                "description": "| | |\n| :--- | :---\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug``` |An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```password```|A password to protect access to the content and excerpt.\n|```title```|The title for the object.\n|```content```|The content for the object.\n|```author```|The ",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "content",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/types\/{{typeId}}?type={{type}}": {
+            "GET": {
+                "summary": "Retrieve a Type",
+                "description": "|||\n|:---|:---\n|```type```|An alphanumeric identifier for the post type.<br\/> Required:**1**\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/settings": {
+            "POST": {
+                "summary": "Update Site Settings ",
+                "description": "|||\n|:---|:---\n|```title```|Site title.\n|```description```|Site tagline.\n|```timezone```|A city in the same timezone as you.\n|```date_format```|A date format for all date strings.\n|```time_format```|A time format for all time strings.\n|```start_of_week```|A day number of the week that the week should start on.\n|```language```|WordPress locale code.\n|```use_smilies```|Convert emoticons like :-) and :-P to graphics on display.\n|```default_category```|Default post category.\n|```default_post_format`",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "GET": {
+                "summary": "Retrieve Site Settings ",
+                "description": "There are no arguments for this endpoint.\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/taxonomies\/{{taxonomy}}": {
+            "GET": {
+                "summary": "Retrieve a Taxonomy",
+                "description": "|||\n|:--|:--\n|```taxonomy```|An alphanumeric identifier for the taxonomy.\n|```context```|Scope under which the request is made; determines fields present in response.<bvr\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json": {
+            "GET": {
+                "summary": "Routes",
+                "description": "Returns all the available API routes and endpoints for a Wordpress instance.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/statuses\/{{statusId}}": {
+            "GET": {
+                "summary": "Retrieve a Status",
+                "description": "|||\n|:---|:---\n|```status```|An alphanumeric identifier for the status.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/pages": {
+            "GET": {
+                "summary": "List Pages",
+                "description": "|||\n|:---|:---\n|```context```|\tScope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```after```|Limit response to posts published after a given ISO8601 compliant date.\n|```author```|Limit result set to posts a",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/posts": {
+            "GET": {
+                "summary": "List Posts",
+                "description": "## List Posts\n| | |\n| :-- | :--\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page``` | Current page of collection.<br\/>Default:**1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```after```|Limit response to posts published after a given ISO8601 compliant date.\n|```author```|Limit result s",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp\/v2\/posts\/{{parentId}}\/revisions\/{{revisionId}}": {
+            "GET": {
+                "summary": "Retrieve a Post-Revision",
+                "description": "| | |\n|:--|:--\n|```parent```|The ID for the parent of the object.\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/tags\/{{tagId}}?name={{test-tag}}": {
+            "POST": {
+                "summary": "Update a Tag ",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```description```|HTML description of the term.\n|```name```|HTML title for the term.\n|```slug```|An alphanumeric identifier for the term unique to its type.\n|```meta```|Meta fields.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/block-renderer\/{{blockName}}": {
+            "GET": {
+                "summary": "Retrieve a Rendered-block",
+                "description": "|||\n|:---|:---\n|```name```|Unique registered name for the block.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **edit**\n|```attributes```|Attributes for core\/tag-cloud block\n|```post_id```|ID of the post context.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/media\/{{mediaId}}?caption={{caption}}": {
+            "POST": {
+                "summary": "Update a Media item",
+                "description": "|||\n|:--|:--\n|```id```|Unique identifier for the object.\n|```date```|The date the object was published, in the site's timezone.\n|```date_gmt```|The date the object was published, as GMT.\n|```slug```|An alphanumeric identifier for the object unique to its type.\n|```status```|A named status for the object.<br\/>One of: **publish, future, draft, pending, private**\n|```title```|The title for the object.\n|```author```|The ID for the author of the object.\n|```comment_status```|Whether or not comments a",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "caption",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/categories\/{{categoriesId}}": {
+            "GET": {
+                "summary": "Retrieve a Category ",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/comments": {
+            "GET": {
+                "summary": "List Comments",
+                "description": "|||\n|:---|:---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```after```|Limit response to comments published after a given ISO8601 compliant date.\n|```author```|Limit result set to comme",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/tags\/{{tagId}}": {
+            "GET": {
+                "summary": "Retrieve a Tag",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the term.\n|```context```|Scope under which the request is made; |```determines```|fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp\/v2\/posts\/{{postId}}\/revisions": {
+            "GET": {
+                "summary": "List Post Revisions",
+                "description": "| | |\n| :-- | :--\n|```parent``` |The ID for the parent of the object.\n|```context```|\tScope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.\n|```search```|Limit results to those matching a string.\n|```exclude```|Ensure result set excludes specific IDs.\n|```include```\t| Limit result set t",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/blocks\/{{blockId}}": {
+            "GET": {
+                "summary": "Retrieve a wp_block",
+                "description": "|||\n|:---|:---\n|```id```|Unique identifier for the object.\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```password```|The password for the post if it is password protected.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/tags?name={{test-tag}}": {
+            "POST": {
+                "summary": "Create a Tag ",
+                "description": "|||\n|:---|:---\n|```description```|HTML description of the term.\n|```name```|HTML title for the term.<br\/>Required: **1**\n|```slug```|An alphanumeric identifier for the term unique to its type.\n|```meta```|Meta fields.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "{{site}}\/wp-json\/wp\/v2\/blocks": {
+            "GET": {
+                "summary": "List wp_blocks",
+                "description": "| | | \n| :--- | :---\n|```context```|Scope under which the request is made; determines fields present in response.<br\/>Default: **view**<br\/>One of: **view, embed, edit**\n|```page```|Current page of the collection.<br\/>Default: **1**\n|```per_page```|Maximum number of items to be returned in result set.<br\/>Default: **10**\n|```search```|Limit results to those matching a string.\n|```after```|Limit response to posts published after a given ISO8601 compliant date.\n|```before```|Limit response to post",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
